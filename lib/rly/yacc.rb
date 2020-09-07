@@ -357,8 +357,8 @@ module Rly
         3
       end
 
-      def on_error(lambda)
-        @error_handler = lambda
+      def on_error(&block)
+        @error_handler = block
       end
 
       def parsed_rules
